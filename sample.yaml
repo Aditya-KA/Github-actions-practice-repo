@@ -1,0 +1,13 @@
+name: github action general syntax
+
+on:
+  workflow_dispatch
+
+jobs:
+   first job:
+	  runs-on: ubuntu:latest
+	  
+      	  
+	  steps:
+	  - name: echoing 
+	    run: echo "my first github action yaml"
