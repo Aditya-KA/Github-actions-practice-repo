@@ -1,13 +1,15 @@
-name: github action general syntax
+name: My First Workflow
 
 on:
-  workflow_dispatch
+  push:
 
 jobs:
-   firstjob:
-	 runs-on: ubuntu-latest
-	  
-      	  
-	 steps:
-	 - name: echoing 
-	   run: echo "my first github action yaml"
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Print Message
+        run: echo "Hello GitHub Actions"
